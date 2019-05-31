@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+<!-- //==================    NOMBRE  ============== -->
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
@@ -25,19 +26,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('Apellidos') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required autofocus>
-
-                                @if ($errors->has('lastname'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('lastname') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+<!-- //==================    EMAIL  ============== <-->
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
@@ -53,6 +43,24 @@
                             </div>
                         </div>
 
+<!-- //==================    ROL  ============== <-->
+
+                        <div class="form-group row">
+                            <label for="rol" class="col-md-4 col-form-label text-md-right">{{ __('Rol') }}</label>
+
+                            <div class="col-md-6">
+
+                                <select id="rol" class="form-control{{ $errors->has('rol') ? ' is-invalid' : '' }}" required>
+                                    <option value="Cliente">Cliente</option>
+                                    <option value="Empleado">Empleado</option>
+                                    <option value="Gerente">Gerente</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+
+<!-- //==================    PASSWORD  ============== <-->
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
@@ -66,6 +74,8 @@
                                 @endif
                             </div>
                         </div>
+
+<!-- //==================    PASSWORD DE CONFIRMACIÓN  ============== <-->
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
