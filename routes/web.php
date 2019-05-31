@@ -19,4 +19,7 @@ Route::get('/', function () {
 Route::get('post', function(){
 	return view('pruebap');
 });
-Route::post('prueba','pruebasController@recibirPost');
+Route::post('prueba','pruebasController@recibirPost');Auth::routes();
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
