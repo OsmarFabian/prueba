@@ -50,7 +50,7 @@
 
                             <div class="col-md-6">
 
-                                <select id="rol" class="form-control{{ $errors->has('rol') ? ' is-invalid' : '' }}" required>
+                                <select name="rol" id="rol" class="form-control{{ $errors->has('rol') ? ' is-invalid' : '' }}" required>
                                     <option value="Cliente">Cliente</option>
                                     <option value="Empleado">Empleado</option>
                                     <option value="Gerente">Gerente</option>

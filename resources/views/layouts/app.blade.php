@@ -12,14 +12,14 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    @yield('styles')
-    <!-- Scripts -->
-    <!-- defer -->
-    <!-- script src="{{ asset('js/app.js') }}"></script -->
     <script src="{{ asset('jquery/jquery-3.3.1.min.js')}}"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
     <script src="{{ asset('popper.min.js')}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js')}}"></script>
+    @yield('styles')
+    <!-- Scripts -->
+    <!-- defer -->
+    <!-- script src="{{ asset('js/app.js') }}"></script -->
     @yield('sctipts')
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -56,8 +56,7 @@
                                     {{ Auth::user()->name }} {{ Auth::user()->lastname }}-{{ Auth::user()->rol }}<span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{action('Investigador\PerfilController@cambiar', Auth::user()->id)}}" class="btn btn-warning">Cambiar Password</a>
-                                    
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

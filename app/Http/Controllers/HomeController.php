@@ -35,17 +35,17 @@ class HomeController extends Controller
         {
             case 'Cliente':
                 $hoy = date("Y-m-d");
-                return view('sistema.Cliente');                
+                return view('sistema.cliente');                
                 break;
 
             case 'Empleado':
                 $hoy = date("Y-m-d");
-                return view('sistema.Empleado');
+                return view('sistema.empleado');
                 break;
                 
             case 'Gerente':
                 $hoy = date("Y-m-d");
-                return view('sistema.Investigador');
+                return view('sistema.gerente');
                 break; 
 
             default:
