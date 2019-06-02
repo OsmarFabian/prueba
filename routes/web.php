@@ -23,4 +23,5 @@ Route::post('prueba','pruebasController@recibirPost');Auth::routes();
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('crear_evento', 'EventosController@agregar_evento');
+Route::get('/crear_evento', 'EventosController@agregar_evento');
+Route::post('/evento', 'EventosController@agregar');

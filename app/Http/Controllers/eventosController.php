@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Evento;
-use App\Models\Cliente;
 
 class EventosController extends Controller{
 
@@ -13,7 +12,7 @@ function agregar_evento()
 	$Eventos = Evento::all();
 	return view ('sistema.crear_evento',compact('Eventos'));
 }	
-/*
+
 
 
 	function agregar(Request $datos)
@@ -22,9 +21,9 @@ function agregar_evento()
 		$nuevo = new Evento();
 		$nuevo->fill($_POST);
 		$nuevo->save();
-		return redirect('/eventos');
+		return redirect('/crear_evento');
 	}
-
+/*
 
 	function agregar_ajax(Request $datos)
 	{
